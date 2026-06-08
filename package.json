@@ -1,0 +1,36 @@
+{
+  "name": "commitment-issues",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c magenta,cyan \"tsx watch server/index.ts\" \"vite --host 0.0.0.0\"",
+    "dev:api": "tsx watch server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.2",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/supertest": "^6.0.3",
+    "jsdom": "^27.2.0",
+    "supertest": "^7.1.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
+  }
+}
